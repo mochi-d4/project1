@@ -1,0 +1,111 @@
+.btn:hover {
+    border-top-right-radius: 40px;
+}
+
+.content {
+    margin-top: 10%;
+    max-width: 700px;
+}
+
+.content h1 {
+    font-size: 70px;
+    color: #222;
+}
+.main h1 {
+    text-align: center;
+}
+
+.content p {
+    margin: 10px 0 30px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+
+.content .btn {
+    padding: 15px 80px;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+
+/* Animasi */
+.anim {
+    opacity: 0;
+    transform: translate(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+/* Bagian Produk */
+.product-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 3px 5%;
+}
+
+.product-card {
+    background-color: #eef5df;
+    border: 1px solid #fff3f3;
+    border-radius: 5px;
+    width: 190px;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgb(235, 230, 230);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.product-card h2 {
+    font-size: 1.5em;
+    color: #484444;
+    margin: 10px 0;
+}
+
+.product-card .price {
+    color: #615959;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card .description {
+    font-size: 1em;
+    color: #666;
+    padding: 0 10px;
+}
+
+.product-card .btn {
+    padding: 10px 30px;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgb(79, 78, 78);
+}
+
+/* Bagian Footer */
+footer {
+    text-align: center;
+    padding: 1em 0;
+   
+    color: #fff;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 1;
+}
+
