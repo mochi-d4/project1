@@ -11,7 +11,7 @@
 <body>
   <div class="hero">
     <nav>
-      <img src="img/logo.png" class="logo" />
+      <img src="img/logooo.png" class="logo" />
       <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="produk.php">Product</a></li>
