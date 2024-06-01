@@ -30,7 +30,7 @@
     </nav>
     <div class="content">
       <h1 class="anim">
-        penggemar<br />
+        hi<br />
         mochier
       </h1>
       <p class="anim">Mari jelajahi keindahan rasa di Mochi, tempat di mana tiap gigitan adalah petualangan baru. Selamat datang, penikmat kuliner sejati!</p>

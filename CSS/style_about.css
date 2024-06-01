@@ -86,8 +86,7 @@ body{
     transition: 0.3s ease;
 }
 .about-content .read-more:hover{
-    background-color: #3e8e41;
-}
+    background-color: s
 @media screen and (max-width: 768px){
     .heading{
         padding: 0px 20px;
