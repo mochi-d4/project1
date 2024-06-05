@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div class="checkout-container">
     <h1>Checkout</h1>
     <?php
-      $quantity = isset($_POST['quantity']) ? (int)$_POST['quantity'] : 10;
-      $pricePerSet = 20000;
-      $totalPrice = ($quantity / 10) * $pricePerSet;
+    $quantity = isset($_POST['quantity']) ? (int)$_POST['quantity'] : 10;
+    $pricePerSet = 30000;
+    $totalPrice = ($quantity / 10) * $pricePerSet;
     ?>
     <form action="proses_checkout.php" method="post">
       <div class="form-group">
@@ -46,11 +48,11 @@
   <script>
     function updateTotalPrice() {
       const quantity = document.getElementById('quantity').value;
-      const totalPrice = (quantity / 10) * 20000;
+      const totalPrice = (quantity / 10) * 30000;
       document.getElementById('total-price').innerText = 'Total Harga: Rp ' + totalPrice.toLocaleString('id-ID');
     }
-    
   </script>
-  
+
 </body>
+
 </html>

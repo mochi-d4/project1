@@ -49,15 +49,15 @@ $conn->close();
     </div>
     <div class="product-details">
       <h1 class="product-title"><?php echo $product['nama_produk']; ?></h1>
-      <p class="product-price">Rp <?php echo number_format($product['harga_per_10_unit'], 0, ',', '.'); ?> per 10 unit</p>
+      <p class="product-price">Rp <?php echo number_format($product['harga_per_10_pcs'], 0, ',', '.'); ?> per 10 pcs</p>
       <p class="product-description">
         <?php echo $product['deskripsi']; ?>
       </p>
       <div class="product-actions">
         <form action="checkout.php" method="post">
           <input type="number" value="10" min="10" step="10" class="quantity" name="quantity" id="quantity" onchange="updateTotalPrice()">
-          <p id="total-price">Total Harga: Rp <?php echo number_format($product['harga_per_10_unit'], 0, ',', '.'); ?></p>
-          <input type="hidden" name="harga_per_10_unit" value="<?php echo $product['harga_per_10_unit']; ?>">
+          <p id="total-price">Total Harga: Rp <?php echo number_format($product['harga_per_10_pcs'], 0, ',', '.'); ?></p>
+          <input type="hidden" name="harga_per_10_pcs" value="<?php echo $product['harga_per_10_pcs']; ?>">
           <button type="submit" class="add-to-cart">Pemesanan</button>
         </form>
       </div>
@@ -69,7 +69,7 @@ $conn->close();
   <script>
     function updateTotalPrice() {
       const quantity = document.getElementById('quantity').value;
-      const pricePerSet = <?php echo $product['harga_per_10_unit']; ?>;
+      const pricePerSet = <?php echo $product['harga_per_10_pcs']; ?>;
       const totalPrice = (quantity / 10) * pricePerSet;
       document.getElementById('total-price').innerText = 'Total Harga: Rp ' + totalPrice.toLocaleString('id-ID');
     }
