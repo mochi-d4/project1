@@ -30,8 +30,8 @@
     </nav>
     <div class="content">
       <h1 class="anim">
-        hi<br />
-        mochier
+        Hi<br />
+        Mochier
       </h1>
       <p class="anim">Mari jelajahi keindahan rasa di Mochi, tempat di mana tiap gigitan adalah petualangan baru. Selamat datang, penikmat kuliner sejati!</p>
       <a href="login.php" class="btn anim">join now</a>

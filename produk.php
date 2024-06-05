@@ -12,7 +12,7 @@
 <body>
   <div class="hero">
     <nav>
-      <img src="img/logo.png" class="logo" />
+      <img src="img/logooo.png" class="logo" />
       <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="produk.php">Product</a></li>
@@ -36,22 +36,19 @@
     <main>
       <div class="product-container">
         <div class="product-card anim">
-          <img src="img/strawberrycoklat.jpeg" alt="Strawberry Coklat">
-          <h2>Strawberry Coklat</h2>
-
-          <a href="detail_produk.php" class="btn anim">Beli Sekarang</a>
+          <img src="img/strawbery.png" alt="Strawbery">
+          <h2>Strawberry Cokelat</h2>
+          <a href="detail produk/detail_strawbey.php" class="btn anim">Beli Sekarang</a>
         </div>
         <div class="product-card anim">
-          <img src="img/oreocoklat.jpeg" alt="Oreo Coklat">
-          <h2>Oreo Coklat</h2>
-
-          <a href="detail_produk.php" class="btn anim">Beli Sekarang</a>
+          <img src="img/manggacoklat.png" alt="Mangga Coklat">
+          <h2>Mangga Cokelat</h2>
+          <a href="detail produk/detail_manggacoklat.php" class="btn anim">Beli Sekarang</a>
         </div>
         <div class="product-card anim">
-          <img src="img/manggacoklat.jpeg" alt="Mangga Coklat">
-          <h2>Mangga Coklat</h2>
-
-          <a href="detail_produk.php" class="btn anim">Beli Sekarang</a>
+          <img src="img/oreocoklat.png" alt="Mangga Coklat">
+          <h2>Oreo Cokelat</h2>
+          <a href="detail produk/detail_oreo.php" class="btn anim">Beli Sekarang</a>
         </div>
         <div class="product-card anim">
           <img src="img/OSK.jpg" alt="Produk 2">
