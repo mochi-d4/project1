@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>Responsive About Us</title>
+  <title>About Us</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="CSS/style_about.css" </head>
+  <link rel="stylesheet" type="text/css" href="CSS/style_about.css" />
+</head>
 
 <body>
   <div class="heading">
