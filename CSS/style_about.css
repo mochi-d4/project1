@@ -29,7 +29,7 @@ body{
     height: 4px;
     display: block;
     margin: 0 auto;
-    background-color: #4caf50;
+    background-color: #000000;
 }
 .heading p{
     font-size: 18px;
@@ -53,8 +53,8 @@ body{
     overflow: hidden;
 }
 .about-image img{
-    max-width: 100%;
-    height: auto;
+    max-width: 75%;
+    height: 5px; 
     display: block;
     transition: 0.5s ease;
 }
