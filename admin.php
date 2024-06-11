@@ -5,19 +5,7 @@ if(!isset($_SESSION['username']) || $_SESSION['role'] != "admin"){
     exit(); // Keluar dari script setelah melakukan redirect
 }
 $username = $_SESSION['username']; // Menyimpan username ke dalam variabel lokal
-
-/* if(isset($_POST['logout'])){
-    //hapus semua data sesi
-    session_unset();
-    //hancurkan sesi
-    session_destroy();
-    //kembali ke halaman login
-    header("location:login.php");
-    exit();
-
-} */
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -79,59 +67,20 @@ $username = $_SESSION['username']; // Menyimpan username ke dalam variabel lokal
                 Pengelolaan
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-<li class="nav-item">
-    <a class="nav-link collapsed" href="product.php">
-        <i class="fas fa-fw fa-cog"></i>
-        <span>Produk</span>
-    </a>
-</li>
-
-
-            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- Nav Item - Produk -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" >
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Banner</span>
+                <a class="nav-link collapsed" href="product.php">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Produk</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
             </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-           
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Invoice -->
             <li class="nav-item active">
                 <a class="nav-link" href="invoice.php">
-                <i class="fa-solid fa-file-invoice"></i>
+                    <i class="fa-solid fa-file-invoice"></i>
                     <span>Invoice</span>
                 </a>
-                
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Info</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>User</span></a>
             </li>
 
             <!-- Divider -->
@@ -159,40 +108,8 @@ $username = $_SESSION['username']; // Menyimpan username ke dalam variabel lokal
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        
-
-                        
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -300,7 +217,7 @@ $username = $_SESSION['username']; // Menyimpan username ke dalam variabel lokal
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
                                         </div>
                                         <div class="col-auto">
-                                        <i class="fa-solid fa-users fa-2x text-gray-300"></i>
+                                            <i class="fa-solid fa-users fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -348,14 +265,8 @@ $username = $_SESSION['username']; // Menyimpan username ke dalam variabel lokal
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <!-- <form action="" method="post">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
-                            data-target="logout" name="logout">Logout</button>
-                    </form> !-->
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary"><a href="proses_logout.php" class="text-light">Logout</a></button>
-                    
                 </div>
             </div>
         </div>

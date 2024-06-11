@@ -1,15 +1,21 @@
+<?php
+include 'config.php';
+
+$sql = "SELECT * FROM produk";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Mochi| WebDef Penjualan</title>
+    <title>Mochi | WebDev Penjualan</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,8 +25,59 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4da832a0d0.js" crossorigin="anonymous"></script>
 
-</head>
+    <style>
+        /* CSS untuk produk sidebar */
+        .sidebar-product-list {
+            padding: 10px;
+        }
 
+        .sidebar-product-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .sidebar-product-item .product-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #4e73df;
+        }
+
+        .sidebar-product-item .product-actions {
+            display: flex;
+            gap: 5px;
+        }
+
+        .sidebar-product-item .btn-update,
+        .sidebar-product-item .btn-delete {
+            padding: 5px 10px;
+            font-size: 12px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .sidebar-product-item .btn-update {
+            background-color: #1cc88a;
+        }
+
+        .sidebar-product-item .btn-delete {
+            background-color: #e74a3b;
+        }
+
+        .sidebar-product-item .btn-update:hover {
+            background-color: #17a673;
+        }
+
+        .sidebar-product-item .btn-delete:hover {
+            background-color: #d62d20;
+        }
+    </style>
+
+</head>
 
 <body id="page-top">
 
@@ -64,28 +121,8 @@
                 </a>
             </li>
 
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Banner</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading -->
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -93,21 +130,6 @@
                     <i class="fas fa-file-invoice"></i>
                     <span>Invoice</span>
                 </a>
-
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Info</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>User</span></a>
             </li>
 
             <!-- Divider -->
@@ -135,33 +157,8 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-
-
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -172,10 +169,9 @@
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -188,38 +184,77 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+               <!-- Begin Page Content -->
+<div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Halaman Produk Admin</h1>
+<!-- Page Heading -->
+<h1 class="h3 mb-4 text-gray-800">Halaman Produk Admin</h1>
 
-                    <!-- Main Content Here -->
-                    <main>
-                        <div class="product-container">
-                            <div class="product">
-                                <h2>Strawberry Coklat</h2>
-                                <p>Deskripsi Strawberry Coklat</p>
-                                <button>Edit</button>
-                                <button>Delete</button>
-                            </div>
-                            <div class="product">
-                                <h2>Oreo Coklat</h2>
-                                <p>Deskripsi Oreo Coklat</p>
-                                <button>Edit</button>
-                                <button>Delete</button>
-                            </div>
-                            <div class="product">
-                                <h2>Mangga Coklat</h2>
-                                <p>Deskripsi Mangga Coklat</p>
-                                <button>Edit</button>
-                                <button>Delete</button>
-                            </div>
-                            <!-- Tambahkan produk lainnya di sini -->
-                        </div>
-                    </main>
+<!-- Main Content Here -->
+<main>
+    <div class="product-container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama Produk</th>
+                    <th>Harga per 10 Pcs</th>
+                    <th>Deskripsi</th>
+                    <th>Gambar</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while($row = $result->fetch_assoc()): ?>
+                <tr>
+                    <td><?php echo $row['id']; ?></td>
+                    <td><?php echo $row['nama_produk']; ?></td>
+                    <td><?php echo $row['harga_per_10_pcs']; ?></td>
+                    <td><?php echo $row['deskripsi']; ?></td>
+                    <td><img src="<?php echo $row['gambar']; ?>" alt="<?php echo $row['nama_produk']; ?>" width="50"></td>
+                    <td>
+                        <a href="edit_product.php?id=<?php echo $row['id']; ?>" class="btn btn-update">Edit</a>
+                        <a href="delete_product.php?id=<?php echo $row['id']; ?>" class="btn btn-delete">Delete</a>
+                    </td>
+                </tr>
+                <?php endwhile; ?>
+            </tbody>
+        </table>
+    </div>
 
+    <!-- Form untuk menambahkan produk baru -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Tambah Produk Baru</h6>
+        </div>
+        <div class="card-body">
+            <form action="add_product.php" method="POST">
+                <div class="form-group">
+                    <label for="nama_produk">Nama Produk</label>
+                    <input type="text" class="form-control" id="nama_produk" name="nama_produk" required>
                 </div>
-                <!-- /.container-fluid -->
+                <div class="form-group">
+                    <label for="harga_per_10_pcs">Harga per 10 Pcs</label>
+                    <input type="text" class="form-control" id="harga_per_10_pcs" name="harga_per_10_pcs" required>
+                </div>
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi</label>
+                    <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="gambar">Link Gambar</label>
+                    <input type="text" class="form-control" id="gambar" name="gambar" required>
+                </div>
+                <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
+            </form>
+        </div>
+    </div>
+
+</main>
+
+</div>
+<!-- /.container-fluid -->
+
 
             </div>
             <!-- End of Main Content -->
@@ -258,7 +293,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="index.php">Logout</a>
                 </div>
             </div>
         </div>
@@ -277,3 +312,5 @@
 </body>
 
 </html>
+
+                            

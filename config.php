@@ -13,8 +13,7 @@ if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
  
-// Koneksi berhasil
-echo "Koneksi berhasil";
+
  
 // Tutup koneksi
 //$conn->close();
