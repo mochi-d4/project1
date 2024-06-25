@@ -1,15 +1,19 @@
 <?php 
-    include 'config.php';
-    
-    $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+include 'config.php';
 
-    $query = mysqli_query($conn, "INSERT INTO users VALUES ('', '$username', '$password', 'user')");
+// Mendapatkan data dari form register
+$username = $_POST['username'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    if($query){
-        header("location:index.php");
-    } else {
-        echo "data gagal ditambahkan".mysqli_error($conn);
-    }
-    
+// Melakukan query untuk memasukkan data ke database
+$query = mysqli_query($conn, "INSERT INTO users (username, password, role) VALUES ('$username', '$password', 'user')");
+
+if ($query) {
+    header("location:produk.php");
+} else {
+    echo "Data gagal ditambahkan: " . mysqli_error($conn);
+}
+
+// Tutup koneksi
+mysqli_close($conn);
 ?>

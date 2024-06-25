@@ -21,12 +21,12 @@ if (isset($_GET['id'])) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama_produk = $_POST['nama_produk'];
-    $harga_per_10_pcs = $_POST['harga_per_10_pcs'];
+    $harga_1_box_isi_10pcs = $_POST['harga_1_box_isi_10pcs'];
     $deskripsi = $_POST['deskripsi'];
     // $gambar = $_POST['gambar'];
 
     // Query to update product
-    $sql = "UPDATE produk SET nama_produk='$nama_produk', harga_per_10_pcs=$harga_per_10_pcs, deskripsi='$deskripsi' WHERE id=$id";
+    $sql = "UPDATE produk SET nama_produk='$nama_produk', harga_1_box_isi_10pcs=$harga_1_box_isi_10pcs, deskripsi='$deskripsi' WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Produk berhasil diperbarui.";
@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <input type="text" class="form-control form-control-user" name="nama_produk" value="<?php echo $row['nama_produk']; ?>" placeholder="Nama Produk">
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" class="form-control form-control-user" name="harga_per_10_pcs" value="<?php echo $row['harga_per_10_pcs']; ?>" placeholder="Harga per 10 Pcs">
+                                            <input type="number" class="form-control form-control-user" name="harga_1_box_isi_10pcs" value="<?php echo $row['harga_1_box_isi_10pcs']; ?>" placeholder="Harga per 10 Pcs">
                                         </div>
                                         <div class="form-group">
                                             <textarea class="form-control form-control-user" name="deskripsi" placeholder="Deskripsi"><?php echo $row['deskripsi']; ?></textarea>

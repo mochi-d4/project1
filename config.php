@@ -1,20 +1,20 @@
 <?php
-// Informasi koneksi ke database
-$host = "localhost"; // Host database
-$username = "root"; // Nama pengguna database
-$password = ""; // Kata sandi database
-$database = "promosi"; // Nama database
+$servername = "localhost";  // atau bisa "127.0.0.1" jika localhost tidak bekerja
+$username = "root";         // Sesuaikan dengan username database Anda
+$password = "";             // Sesuaikan dengan password database Anda
+$dbname = "promosi";  // Sesuaikan dengan nama database Anda
 
-// Membuat koneksi ke database
-$conn = mysqli_connect($host, $username, $password, $database);
+// Buat koneksi
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Memeriksa koneksi
+// Cek koneksi
 if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
- 
 
- 
-// Tutup koneksi
-//$conn->close();
+// Atur charset ke utf8mb4 jika diperlukan
+if (!$conn->set_charset("utf8mb4")) {
+    printf("Error loading character set utf8mb4: %s\n", $conn->error);
+    exit();
+}
 ?>

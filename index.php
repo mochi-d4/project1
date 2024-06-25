@@ -15,7 +15,7 @@
       <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="produk.php">Product</a></li>
-        <li><a href="about.php">About</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
       <div>
         <a href="proses_logout.php">logout</a>

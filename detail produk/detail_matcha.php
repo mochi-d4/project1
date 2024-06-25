@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // Retrieve product data from database using prepared statement
-$product_id = 2; // ID produk yang ingin ditampilkan
+$product_id = 4; // ID produk yang ingin ditampilkan
 $sql = "SELECT * FROM produk WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $product_id);

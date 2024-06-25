@@ -198,7 +198,7 @@ $result = $conn->query($sql);
                 <tr>
                     <th>ID</th>
                     <th>Nama Produk</th>
-                    <th>Harga per 10 Pcs</th>
+                    <th>Harga Per Box</th>
                     <th>Deskripsi</th>
                     <th>Gambar</th>
                     <th>Aksi</th>
@@ -209,7 +209,7 @@ $result = $conn->query($sql);
                 <tr>
                     <td><?php echo $row['id']; ?></td>
                     <td><?php echo $row['nama_produk']; ?></td>
-                    <td><?php echo $row['harga_per_10_pcs']; ?></td>
+                    <td><?php echo $row['harga_1_box_isi_10pcs']; ?></td>
                     <td><?php echo $row['deskripsi']; ?></td>
                     <td><img src="<?php echo $row['gambar']; ?>" alt="<?php echo $row['nama_produk']; ?>" width="50"></td>
                     <td>
@@ -234,8 +234,8 @@ $result = $conn->query($sql);
                     <input type="text" class="form-control" id="nama_produk" name="nama_produk" required>
                 </div>
                 <div class="form-group">
-                    <label for="harga_per_10_pcs">Harga per 10 Pcs</label>
-                    <input type="text" class="form-control" id="harga_per_10_pcs" name="harga_per_10_pcs" required>
+                    <label for="harga_1_box_isi_10pcs">Harga Per Box</label>
+                    <input type="text" class="form-control" id="harga_1_box_isi_10pcs" name="harga_1_box_isi_10pcs" required>
                 </div>
                 <div class="form-group">
                     <label for="deskripsi">Deskripsi</label>
